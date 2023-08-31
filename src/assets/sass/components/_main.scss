@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+::-moz-selection { 
+    color: black;
+    background: #FFE13B;
+}
+  
+::selection {
+    color: black;
+    background: #FFE13B;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #2D0F11;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #F1524D;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #b33e3a;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} 
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    color: #F1524D;
+    cursor: none;
+    background: linear-gradient(180deg, #2D0F11 0%, #080F17 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    cursor: none;
+    cursor: pointer;
+}
+
+@media (hover:hover) and (pointer: fine){
+    .cursor{
+        position: fixed;
+        width: 30px;
+        height: 30px;
+        margin-left: -15px;
+        margin-top: -15px;
+        border: 1px solid #3CFBF6;
+        background-color: #112327;
+        pointer-events: none;
+        mix-blend-mode: difference;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    } 
+    .cursor-inner-square{
+        background-color:#3CFBF6;
+        width: 5px;
+        height: 2.5px;
+    }
+}
+
+footer{
+    background-color: #F1524D;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    text-transform: uppercase;
+    width: 100%;
+    padding: .5rem 2.5rem;
+    height: fit-content;
+    span{
+        font-weight: 500;
+        a{
+            background-color: #2D0F11;
+            padding: .1rem .2rem;
+            color: #F1524D;
+        }
+    }
+}

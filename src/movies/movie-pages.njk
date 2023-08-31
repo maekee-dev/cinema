@@ -1,0 +1,43 @@
+---
+pagination:
+    data: movies
+    size: 1
+    alias: movie
+permalink: "movies/{{ movie.movieId | slugify }}/"
+layout: base.njk
+css: movie
+title: {{ movie.title }}
+---
+
+<main>
+    <div class="nav">
+        <span class="nav"><a href="/" class="cursor-scale">Home</a>/<a href="/movies/" class="cursor-scale">Movies</a>/{{ movie.movieId }}</span>
+    </div>
+    <div class="container">
+        <p>
+            {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title: <span>{{ movie.title }}</span> <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;movieId: <span>{{ movie.movieId }}</span> <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;genres: [ <br>
+                {% for genre in movie.genres %}
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>{{ genre }}</span>{%if not loop.last %},{% endif %} <br>
+                {% endfor %}
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;] <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;director: [ <br>
+                {% for director in movie.director %}
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>{{ director }}</span>{%if not loop.last %},{% endif %} <br>
+                {% endfor %}
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;] <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;stars: [ <br>
+                {% for star in movie.stars %}
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>{{ star }}</span>{%if not loop.last %},{% endif %} <br>
+                {% endfor %} 
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MPAA: <span>{{ movie.MPAA }}</span> <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;year: <span>{{ movie.year }}</span> <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;imdbRating: <span>{{ movie.imdbRating }}</span> <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;userRating: <span>{{ movie.userRating }}</span> <br>
+            }
+        </p>
+    </div>
+</main>

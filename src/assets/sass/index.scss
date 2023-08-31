@@ -1,0 +1,707 @@
+@import './components/_main';
+
+.cinema-item{
+    &:hover{
+        .top-left-1{
+            opacity: 1;
+        }
+        .top-left-2{
+            opacity: 1;
+        }
+        .bottom-left-1{
+            opacity: 1;
+        }
+        .bottom-left-2{
+            opacity: 1;
+        }
+        .bottom-right-1{
+            opacity: 1;
+        }
+        .bottom-right-2{
+            opacity: 1;
+        }
+        .top-right-1{
+            opacity: 1;
+        }
+        .top-right-2{
+            opacity: 1;
+        }
+    }
+}
+
+.imdb-disable{
+    display: none;
+}
+
+main{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    max-width: 1920px;
+}
+
+header{
+    margin: 40px 6.25vw 0;
+    padding: 0 1rem 10px 1rem;
+    border-bottom: 1px solid #F1524D;
+    color: 3CFBF6#3CFBF6;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.header-text span{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.header-text p{
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.header-link{
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 500;
+    a{
+        display: flex;
+        gap: .35rem;
+        align-items: center;
+    }
+}
+
+.body-container{
+    display: flex;
+    justify-content: space-around;
+    margin: 75px 6.25vw;
+}
+
+.first-column{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.cinema-header{
+    width: 100%;
+    border-bottom: 1px solid #F1524D;
+    padding: 3px 0;
+}
+
+.cinema-header h2{
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.cinema-item-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 12px;
+    width: 100%;
+}
+
+#paginated-list{
+    width: 100%;
+}
+
+.cinema-item{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    margin-top: .5rem;
+    gap: 1rem;
+}
+
+.stars-imgs{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.stars-imgs img{
+    width: 21px;
+    height: auto;
+}
+
+.film-stars{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    width: auto;
+}
+
+.points span{
+    font-weight: 500;
+    font-size: 13px;
+    color: #3CFBF6;
+}
+
+.film-name{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.film-name h3{
+    font-size: 20px;
+    font-weight: 500;
+    word-break: break-all;
+}
+
+.film-name span{
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.hover-status{
+    position: absolute;
+    opacity: 0;
+    background-color: #F1524D;
+    transition: opacity 200ms ease;
+}
+
+.top-left-1{
+    width: 12px;
+    height: 1px;
+    top: 0;
+    left: 0;
+}
+
+.top-left-2{
+    width: 1px;
+    height: 12px;
+    top: 0;
+    left: 0;
+}
+
+.top-right-1{
+    width: 12px;
+    height: 1px;
+    top: 0;
+    right: 0;
+}
+
+.top-right-2{
+    width: 1px;
+    height: 12px;
+    top: 0;
+    right: 0;
+}
+
+.bottom-left-1{
+    width: 12px;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+}
+
+.bottom-left-2{
+    width: 1px;
+    height: 12px;
+    bottom: 0;
+    left: 0;
+}
+
+.bottom-right-1{
+    width: 12px;
+    height: 1px;
+    bottom: 0;
+    right: 0;
+}
+
+.bottom-right-2{
+    width: 1px;
+    height: 12px;
+    bottom: 0;
+    right: 0;
+}
+
+.hidden {
+    display: none;
+}
+  
+.pagination-container {
+    display: flex;
+    align-items: center;
+    bottom: 0;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    justify-content: center;
+}
+  
+.pagination-number{
+    font-size: 12px;
+    background-color: transparent;
+    border: 1px solid #25111A;
+    margin: 0.25rem 0.25rem;
+    height: 30px;
+    width: 30px;
+    color: #F1524D;
+    font-weight: 500;
+    transition: background-color 200ms ease;
+}
+  
+.pagination-number:hover{
+    background-color: #FFE13B;
+    cursor: pointer;
+}
+  
+.pagination-number.active {
+    background-color: #25111A;
+}
+
+.second-column{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 500px;
+}
+
+.imdb-comparison-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.imdb-header{
+    width: 100%;
+    padding: 3px 0;
+}
+
+.imdb-header h2{
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.imdb-body{
+    display: flex;
+    width: 100%;
+    margin-top: .5rem;
+    text-transform: uppercase;
+}
+
+.imdb-body-left{
+    background-color: #112327;
+    position: relative;
+    flex-grow: 1;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.imdb-name{
+    display: flex;
+    flex-direction: column;
+    color: #3CFBF6;
+}
+
+.imdb-name h3{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.imdb-name span{
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.my-value{
+    font-size: 14px;
+    font-weight: 500;
+    color: #3CFBF6;
+}
+
+.imdb-value{
+    font-size: 14px;
+    font-weight: 500;
+    color: #FFE13B;
+}
+
+.imdb-error{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.imdb-error span{
+    font-size: 14px;
+    font-weight: 500;
+    color: #3CFBF6;
+}
+
+.imdb-loading{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.imdb-top-left-1{
+    width: 12px;
+    height: 1px;
+    top: -1px;
+    left: -1px;
+    position: absolute;
+    background-color: #3CFBF6;
+}
+
+.imdb-top-left-2{
+    width: 1px;
+    height: 12px;
+    top: -1px;
+    left: -1px;
+    position: absolute;
+    background-color: #3CFBF6;
+}
+
+.imdb-top-right-1{
+    width: 12px;
+    height: 1px;
+    top: -1px;
+    right: -1px;
+    position: absolute;
+    background-color: #3CFBF6;
+}
+
+.imdb-top-right-2{
+    width: 1px;
+    height: 12px;
+    top: -1px;
+    right: -1px;
+    position: absolute;
+    background-color: #3CFBF6;
+}
+
+.imdb-bottom-left-1{
+    width: 12px;
+    height: 1px;
+    bottom: -1px;
+    left: -1px;
+    position: absolute;
+    background-color: #3CFBF6;
+}
+
+.imdb-bottom-left-2{
+    width: 1px;
+    height: 12px;
+    bottom: -1px;
+    left: -1px;
+    position: absolute;
+    background-color: #3CFBF6;
+}
+
+.imdb-bottom-right-1{
+    width: 12px;
+    height: 1px;
+    bottom: -1px;
+    right: -1px;
+    position: absolute;
+    background-color: #3CFBF6;
+}
+
+.imdb-bottom-right-2{
+    width: 1px;
+    height: 12px;
+    bottom: -1px;
+    right: -1px;
+    position: absolute;
+    background-color: #3CFBF6;
+}
+
+.info-container{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-body{
+    margin-top: .8rem;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #F1524D;
+    background-color: #201118;
+    display: flex;
+    flex-direction: column;
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 2rem;
+        padding: 1rem;
+        width: 100%;
+        height: 100%;
+        .item{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-transform: uppercase;
+            h3{
+                font-size: 16px;
+                font-weight: 500;
+            }
+            p{
+                font-size: 1rem;
+                span{
+                    padding: .25rem;
+                    background-color: #F1524D;
+                    color: #25111A;
+                    font-weight: 500;
+                }
+            }
+        }
+        .link{
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 1rem;
+            a{
+                padding: .5rem;
+                background-color: #F1524D;
+                color: #25111A;
+                width: fit-content;
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+
+.info-chart{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6px;
+}
+
+.info-chart span{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.info-chart h3{
+    font-size: 14px;
+    font-weight: 500;
+    max-width: 50px;
+    min-height: 35px;
+    text-align: center;
+}
+
+.chart-container{
+    border: 1px solid #3CFBF6;
+    width: 50px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.chart-container-yellow{
+    border: 1px solid #FFE13B;
+    width: 50px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.chart-1{
+    height: 70%;
+    background-color: #3CFBF6;
+}
+
+.chart-2{
+    height: 20%;
+    background-color: #3CFBF6;
+}
+
+.chart-3{
+    height: 45%;
+    background-color: #3CFBF6;
+}
+
+.chart-4{
+    height: 100%;
+    background-color: #FFE13B;
+}
+
+.chart-5{
+    height: 60%;
+    background-color: #FFE13B;
+}
+
+.chart-margin-top{
+    width: 100%;
+    height: 10px;
+}
+
+.chart-margin-bottom{
+    width: 100%;
+    height: 10px;
+    background-color: #3CFBF6;
+}
+
+.chart-margin-bottom-yellow{
+    width: 100%;
+    height: 10px;
+    background-color: #FFE13B;
+}
+
+.imdb-stars{
+    display: flex;
+    flex-direction: column-reverse;
+    width: 120px;
+    height: fit-content;
+}
+
+.imdb-yellow-stars{
+    display: flex;
+    justify-content: space-between;
+    height: 20px;
+    width: 120px;
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+}
+
+.imdb-yellow-stars img{
+    width: 21px;
+    height: auto;
+}
+
+.imdb-blue-stars{
+    display: flex;
+    justify-content: space-between;
+    height: 20px;
+    width: 120px;
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+}
+
+.imdb-blue-stars img{
+    width: 21px;
+    height: auto;
+}
+
+.film-stars{
+    margin-right: .5rem;
+}
+
+@media screen and (max-width: 1440px) {
+    .body-container{
+        margin: 40px 6.25vw;
+    }
+}
+
+@media screen and (max-width: 1240px){
+    .body-container{
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    main{
+        min-height: auto;
+        height: auto;
+    }
+    .second-column,
+    .first-column{
+        width: 100%;
+    }
+    .pagination-container{
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .film-name h3{
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .film-name span{
+        font-weight: 500;
+        font-size: 12px;
+    }
+    .imdb-name{
+        display: none;
+    }
+    .imdb-body-left{
+        justify-content: space-around;
+    }
+    .chart-container,
+    .chart-container-yellow{
+        width: 40px;
+    }
+    .info-chart h3{
+        font-size: 12px;
+        max-width: 40px;
+    }
+    .info-body{
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 2rem;
+            padding: 1rem .75rem;
+            .item{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                p{
+                    margin-top: 1rem;
+                }
+            }
+            .link{
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                margin-top: 1rem;
+                a{
+                    padding: .5rem;
+                    background-color: #F1524D;
+                    color: #25111A;
+                    width: fit-content;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .header-link{
+        display: none;
+    }
+    .header-text{
+        display: flex;
+        align-items: flex-end;
+        gap: .5rem;
+    }
+    header{
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .stars-imgs{
+        display: none;
+    }
+    .film-stars{
+        width: auto;
+    }
+}
